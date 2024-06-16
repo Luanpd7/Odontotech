@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Services</title>
+    <meta charset="utf-8">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="description" content="Your description">
+    <meta name="keywords" content="Your keywords">
+    <meta name="author" content="Your name">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="fonts/font-awesome.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/touchTouch.css">
+    
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-migrate-1.2.1.js"></script>
+    <script src="js/touchTouch.jquery.js"></script>
+    <script src="js/superfish.js"></script>
+    <script src="js/jquery.mobilemenu.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.ui.totop.js"></script>
+    <script src="js/jquery.touchSwipe.min.js"></script>
+    <script src="js/jquery.equalheights.js"></script>
+
+    <script>
+        $(window).load( function(){	
+            // Initialize the gallery
+            $('.thumb').touchTouch();	 
+        });
+
+        // Função para marcar a consulta
+        function marcarConsulta(dia) {
+            // Abrir modal e preencher o dia selecionado
+            $('#modalDia').text(dia);
+            $('#modalConsulta').modal('show');
+        }
+
+        // Função para salvar a consulta
+        function salvarConsulta() {
+            var nomePaciente = $('#nomePaciente').val();
+            var nomeMedico = $('#nomeMedico').val();
+            var horaConsulta = $('#horaConsulta').val();
+            
+            // Aqui você pode adicionar a lógica para salvar a consulta no backend
+
+            // Exemplo de alerta (substitua pelo código real de envio de dados)
+            alert("Consulta marcada:\nNome do paciente: " + nomePaciente + "\nNome do médico: " + nomeMedico + "\nHora da consulta: " + horaConsulta);
+
+            // Fechar o modal
+            $('#modalConsulta').modal('hide');
+        }
+    </script>
+    
+    <!--[if lt IE 9]>
+    <div style='text-align:center'><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div>  
+    <![endif]-->
+    <!--[if lt IE 9]><script src="../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  
+    <style>
+        /* Estilos para o calendário */
+        .calendar {
+            margin-top: 20px;
+            font-family: Arial, sans-serif;
+        }
+        .calendar table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 1px solid #ccc;
+        }
+        .calendar th, .calendar td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+        .calendar th {
+            background-color: #f0f0f0;
+        }
+        .calendar td {
+            background-color: #fff;
+            cursor: pointer;
+        }
+        .calendar .today {
+            background-color: #ffc;
+        }
+    </style>
+</head>
+
+<body>
+<header id="header">
+    <article class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <h1 class="navbar-brand navbar-brand_"><a href="index.html"><img alt="Vedi"  height="150" width="150" src="img/odontotech.png"></a></h1> 
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+             
+            </div>
+        </div>
+    </article>
+    <article class="container">
+        <div class="menuheader">
+            <nav class="navbar navbar-default navbar-static-top tm_navbar" role="navigation">
+                <ul class="nav sf-menu">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="index-1.html">Agendamento Consulta</a></li>
+                  <li><a href="index-2.html">Dashboard</a></li>
+                  <li><a href="index-3.html">Cadastrar Dentista</a></li>
+                  <li class="last"><a href="index-4.html">Contacts</a></li>
+                </ul>
+            </nav>
+        </div>
+    </article>
+</header>
+
+<div id="content">
+    <section class="row_3">
+        <div class="container">
+            <h2>Appointment Calendar</h2>
+            <div class="calendar">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Sun</th>
+                            <th>Mon</th>
+                            <th>Tue</th>
+                            <th>Wed</th>
+                            <th>Thu</th>
+                            <th>Fri</th>
+                            <th>Sat</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td onclick="marcarConsulta(1)">1</td>
+                            <td onclick="marcarConsulta(2)">2</td>
+                            <td onclick="marcarConsulta(3)">3</td>
+                            <td onclick="marcarConsulta(4)">4</td>
+                            <td onclick="marcarConsulta(5)">5</td>
+                            <td onclick="marcarConsulta(6)">6</td>
+                            <td onclick="marcarConsulta(7)">7</td>
+                        </tr>
+                        <tr>
+                            <td onclick="marcarConsulta(8)">8</td>
+                            <td onclick="marcarConsulta(9)">9</td>
+                            <td onclick="marcarConsulta(10)">10</td>
+                            <td onclick="marcarConsulta(11)">11</td>
+                            <td onclick="marcarConsulta(12)">12</td>
+                            <td onclick="marcarConsulta(13)">13</td>
+                            <td onclick="marcarConsulta(14)">14</td>
+                        </tr>
+                        <tr>
+                            <td onclick="marcarConsulta(15)">15</td>
+                            <td onclick="marcarConsulta(16)">16</td>
+                            <td onclick="marcarConsulta(17)">17</td>
+                            <td onclick="marcarConsulta(18)">18</td>
+                            <td onclick="marcarConsulta(19)">19</td>
+                            <td onclick="marcarConsulta(20)">20</td>
+                            <td onclick="marcarConsulta(21)">21</td>
+                        </tr>
+                        <tr>
+                            <td onclick="marcarConsulta(22)">22</td>
+                            <td onclick="marcarConsulta(23)">23</td>
+                            <td onclick="marcarConsulta(24)">24</td>
+                            <td onclick="marcarConsulta(25)">25</td>
+                            <td onclick="marcarConsulta(26)">26</td>
+                            <td onclick="marcarConsulta(27)">27</td>
+                            <td onclick="marcarConsulta(28)">28</td>
+                        </tr>
+                        <tr>
+                            <td onclick="marcarConsulta(29)">29</td>
+                            <td onclick="marcarConsulta(30)">30</td>
+                            <td onclick="marcarConsulta(31)">31</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- Modal para marcar a consulta -->
+<div class="modal fade" id="modalConsulta" tabindex="-1" role="dialog" aria-labelledby="modalConsultaLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="modalConsultaLabel">Marcar Consulta para o Dia <span id="modalDia"></span></h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="nomePaciente">Nome do Paciente:</label>
+                        <input type="text" class="form-control" id="nomePaciente">
+                    </div>
+                    <div class="form-group">
+                        <label for="nomeMedico">Nome do Médico:</label>
+                        <input type="text" class="form-control" id="nomeMedico">
+                    </div>
+                    <div class="form-group">
+                        <label for="horaConsulta">Hora da Consulta:</label>
+                        <input type="text" class="form-control" id="horaConsulta">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary" onclick="salvarConsulta()">Salvar Consulta</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <div class="footerrow1">
+            <div class="row">
+                <article class="col-lg-6 col-md-6 col-sm-6 col-lg-push-6 col-md-push-6 col-sm-push-6 colfooterrow1">
+                    <ul class="social2 clearfix">
+                        <li><a href="#"><img src="img/social_icon1.png" alt=""></a></li>
+                        <li><a href="#"><img src="img/social_icon2.png" alt=""></a></li>
+                        <li><a href="#"><img src="img/social_icon3.png" alt=""></a></li>
+                        <li><a href="#"><img src="img/social_icon4.png" alt=""></a></li>
+                    </ul> 
+                </article>
+                <article class="col-lg-6 col-md-6 col-sm-6 col-lg-pull-6 col-md-pull-6 col-sm-pull-6 colfooterrow1">
+                    <p class="footerpriv"><a href="index.html">Vedi </a> &copy; <span id="copyright-year"></span> <img src="img/linefooter.jpg" alt=""> <strong><a class="privacylink" href="index-5.html">Privacy Policy</a></strong></p>
+                </article>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="js/bootstrap.min.js"></script>
+<script src="js/tm-scripts.js"></script>
+</body>
+</html>
